@@ -8,7 +8,7 @@ Output matches the
 [`testhide-pytest-plugin`](https://github.com/thuesdays/testhide-pytest-plugin) contract
 (`fail_id`, `test_resolution`, `<system-out>`, suite metadata, `testhide_schema_version=1`).
 Canonical spec:
-[Testhide Report Format v1](https://github.com/thuesdays/testhide/blob/main/docs/specs/REPORT-FORMAT-V1.md).
+[Testhide Report Format v1](https://testhide.com/plugins/report-format/).
 
 ## Install
 
@@ -81,8 +81,8 @@ via a temporary `.npmrc`.
 NPM_TOKEN=npm_...     # automation token with publish rights to the @testhide scope
 ```
 
-**CI (GitHub Actions):** run the *Publish to npm* workflow (manual `workflow_dispatch`). Required
-repository secret: `NPM_TOKEN`.
+**CI (GitHub Actions):** pushing to `main` auto-publishes (`npm test` gate → patch bump → npm →
+GitHub Release; loop-guarded). Required repository secret: `NPM_TOKEN`.
 
 ## License
 
