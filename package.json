@@ -1,11 +1,26 @@
 {
   "name": "@testhide/reporters",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Test reporters (Jest, Mocha, Vitest, Playwright) emitting Testhide Report Format v1 (JUnit-extended) for the Testhide build system.",
-  "keywords": ["jest", "mocha", "vitest", "playwright", "reporter", "junit", "testhide", "reporting", "ci"],
+  "keywords": [
+    "jest",
+    "mocha",
+    "vitest",
+    "playwright",
+    "reporter",
+    "junit",
+    "testhide",
+    "reporting",
+    "ci"
+  ],
   "homepage": "https://github.com/thuesdays/testhide-js",
-  "repository": { "type": "git", "url": "git+https://github.com/thuesdays/testhide-js.git" },
-  "bugs": { "url": "https://github.com/thuesdays/testhide-js/issues" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thuesdays/testhide-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thuesdays/testhide-js/issues"
+  },
   "license": "MIT",
   "author": "Mykola Kovhanko <thuesdays@gmail.com>",
   "main": "src/index.js",
@@ -17,8 +32,14 @@
     "./playwright": "./src/playwright.js",
     "./package.json": "./package.json"
   },
-  "files": ["src/", "README.md", "LICENSE"],
-  "engines": { "node": ">=14" },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -29,10 +50,18 @@
     "@playwright/test": ">=1.30"
   },
   "peerDependenciesMeta": {
-    "jest": { "optional": true },
-    "mocha": { "optional": true },
-    "vitest": { "optional": true },
-    "@playwright/test": { "optional": true }
+    "jest": {
+      "optional": true
+    },
+    "mocha": {
+      "optional": true
+    },
+    "vitest": {
+      "optional": true
+    },
+    "@playwright/test": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "jest": "^29.7.0"
