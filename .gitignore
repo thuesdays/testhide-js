@@ -12,6 +12,10 @@ report.xml
 # packed tarball
 *.tgz
 
+# Secrets / local publish env
+.env.local
+.npmrc
+
 # OS / IDE
 .DS_Store
 .idea/

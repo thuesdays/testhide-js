@@ -1,21 +1,38 @@
 {
-  "name": "@testhide/jest-reporter",
+  "name": "@testhide/reporters",
   "version": "0.1.0",
-  "description": "Jest reporter emitting Testhide Report Format v1 (JUnit-extended) for the Testhide build system.",
-  "keywords": ["jest", "jest-reporter", "junit", "testhide", "reporting", "ci"],
+  "description": "Test reporters (Jest, Mocha, Vitest, Playwright) emitting Testhide Report Format v1 (JUnit-extended) for the Testhide build system.",
+  "keywords": ["jest", "mocha", "vitest", "playwright", "reporter", "junit", "testhide", "reporting", "ci"],
   "homepage": "https://github.com/thuesdays/testhide-js",
   "repository": { "type": "git", "url": "https://github.com/thuesdays/testhide-js.git" },
   "bugs": { "url": "https://github.com/thuesdays/testhide-js/issues" },
   "license": "MIT",
   "author": "thuesdays",
   "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./jest": "./src/jest.js",
+    "./mocha": "./src/mocha.js",
+    "./vitest": "./src/vitest.js",
+    "./playwright": "./src/playwright.js",
+    "./package.json": "./package.json"
+  },
   "files": ["src/", "README.md", "LICENSE"],
   "engines": { "node": ">=14" },
   "scripts": {
     "test": "jest"
   },
   "peerDependencies": {
-    "jest": ">=27"
+    "jest": ">=27",
+    "mocha": ">=9",
+    "vitest": ">=1",
+    "@playwright/test": ">=1.30"
+  },
+  "peerDependenciesMeta": {
+    "jest": { "optional": true },
+    "mocha": { "optional": true },
+    "vitest": { "optional": true },
+    "@playwright/test": { "optional": true }
   },
   "devDependencies": {
     "jest": "^29.7.0"
