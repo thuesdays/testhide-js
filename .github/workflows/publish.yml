@@ -53,9 +53,19 @@ jobs:
           echo "New version: $NEW_VERSION"
           echo "version=$NEW_VERSION" >> "$GITHUB_OUTPUT"
 
-      - name: Publish (public scoped package)
+      - name: Sanitize npm token
+        # A stray newline/space pasted into the NPM_TOKEN secret makes an
+        # illegal HTTP auth header ("*** is not a legal HTTP header value").
+        # Strip whitespace and re-mask, then hand the clean value to npm via
+        # NODE_AUTH_TOKEN (referenced by the .npmrc that setup-node generated).
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          RAW_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          CLEAN="$(printf '%s' "$RAW_NPM_TOKEN" | tr -d '[:space:]')"
+          echo "::add-mask::$CLEAN"
+          echo "NODE_AUTH_TOKEN=$CLEAN" >> "$GITHUB_ENV"
+
+      - name: Publish (public scoped package)
         run: npm publish --access public
 
       - name: Commit version bump + tag
