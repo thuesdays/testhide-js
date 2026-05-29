@@ -4,10 +4,10 @@
   "description": "Test reporters (Jest, Mocha, Vitest, Playwright) emitting Testhide Report Format v1 (JUnit-extended) for the Testhide build system.",
   "keywords": ["jest", "mocha", "vitest", "playwright", "reporter", "junit", "testhide", "reporting", "ci"],
   "homepage": "https://github.com/thuesdays/testhide-js",
-  "repository": { "type": "git", "url": "https://github.com/thuesdays/testhide-js.git" },
+  "repository": { "type": "git", "url": "git+https://github.com/thuesdays/testhide-js.git" },
   "bugs": { "url": "https://github.com/thuesdays/testhide-js/issues" },
   "license": "MIT",
-  "author": "thuesdays",
+  "author": "Mykola Kovhanko <thuesdays@gmail.com>",
   "main": "src/index.js",
   "exports": {
     ".": "./src/index.js",
