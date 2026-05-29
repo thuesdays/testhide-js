@@ -1,6 +1,6 @@
 {
   "name": "@testhide/reporters",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Test reporters (Jest, Mocha, Vitest, Playwright) emitting Testhide Report Format v1 (JUnit-extended) for the Testhide build system.",
   "keywords": [
     "jest",
